@@ -12,18 +12,8 @@
         <main class="main_container">
             <TabbarSec />
             <Content>
-
             </Content>
-
         </main>
-
-        <!-- <div class="test">
-            <el-button class="item"
-                v-for="item in [1, 234, , 1, 1, 1, 1, 1, 1, 1, 1, , 1, 1, 1, 1, 1, 1, 1, 1, , 1, 1, 1, 1, 1, 1, 1, , 1, 1, 1, 1, 1, 1, 1, , 1, 1, 1, 1, 1, 1, 1, , 1, 1, 1, 1, 1, 1, 1, , 1, 1, 1, 1, 1, 1, 1, , 1, 1, 1, 1]">
-                {{ item }}
-            </el-button>
-        </div> -->
-
     </div>
 </template>
 
@@ -42,6 +32,7 @@ export default {
 
 <style scoped>
 .contain_top {
+
     display: flex;
     flex-direction: column;
     height: 200px;
@@ -51,8 +42,10 @@ export default {
 }
 
 .main_container {
-    position: relative;
-    width: 85vw;
+    position: absolute;
+    /* width: 85vw; */
+    top: 200px;
+    left: 7.5vw;
     min-width: 1600px;
 }
 
@@ -61,18 +54,5 @@ export default {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.test {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    width: 90vw;
-    gap: 10px;
-}
-
-
-.test .item:nth-child(1) {
-    margin-left: 12px
 }
 </style>

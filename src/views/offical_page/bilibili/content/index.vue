@@ -3,7 +3,6 @@
         <div class="refresh">
             <el-button class="btn" color="gray">
                 <div style="display: flex; flex-direction: column;">
-
                     <svg_Y class="svg_refresh" name="refresh" width="20px" color="#525255"></svg_Y>
                     <span>换</span>
                     <span>一</span>
@@ -57,6 +56,8 @@ export default {
 }
 
 .main_contain {
+    width: 85vw;
+    min-width: 1590px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));

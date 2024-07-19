@@ -1,3 +1,6 @@
+哔哩哔哩复现效果如下
+![alt text](image.png)
+
 # management_system
 
 This template should help get you started developing with Vue 3 in Vite.

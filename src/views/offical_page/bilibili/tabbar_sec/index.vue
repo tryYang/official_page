@@ -13,7 +13,7 @@
                 :title="item.title" :istop=item.top :showmore=item.more />
         </div>
         <div class="right_container">
-            <!-- <el-divider direction="vertical" height="50px" /> -->
+
             <el-button class="sectab_btn" v-for=" (button, index) in right_buttons" :key="button.iconname"
                 style="border-width: 0; background-color: transparent;" @mouseenter="svghoverindex(index)"
                 @mouseleave="svg_index = -1">
@@ -30,9 +30,7 @@
 
 <script setup lang="ts">
 import ButtonWithPop from "@/components/Button/popover/index.vue";
-import { More } from "@element-plus/icons-vue";
-import { id } from "element-plus/es/locales.mjs";
-import { it } from "node:test";
+
 import { ref } from 'vue'
 const leftbuttons = [{ iconname: "dongtai2", title: "动态" }, { iconname: "hot", title: "热门" }];
 const channel_data = [{ title: "番剧", top: true, data: [{ title: " 连载动画" }, { title: " 完结动画" }, { title: "咨讯" }, { title: "官方延伸" }, { title: "新番时间表" }, { title: "番剧索引" }] },
@@ -66,7 +64,6 @@ let svg_index = ref(-1);
 
 const svghoverindex = (idx: number) => {
     svg_index.value = idx;
-
 };
 </script>
 <script lang="ts">
@@ -75,11 +72,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .main {
     display: flex;
     margin: 30px 0;
-
 }
 
 .left_container {
@@ -101,7 +97,7 @@ export default {
     /* 两行，根据内容自动调整高度 */
 }
 
-.mid_container .sectab_btn:nth-last-child() {
+.mid_container .sectab_btn:nth-last-child(1) {
     color: black;
 }
 
@@ -109,20 +105,16 @@ export default {
     margin-left: 12px;
 }
 
-
-
-
 .right_container {
-    position: relative;
     display: grid;
+    position: relative;
     grid-template-columns: repeat(3, auto);
-
     grid-template-rows: auto auto;
-
 }
 
 .right_container::after {
-    position: absolute;
+    position:
+        absolute;
     content: "";
     background-color: gray;
     height: 100%;
@@ -131,17 +123,11 @@ export default {
     left: 12px;
 }
 
-
-
-
-
 .icon_right {
-
     transition: ease-in-out;
 }
 
 @media (max-width: 1600px) {
-
     .icon_right {
         display: none;
     }
